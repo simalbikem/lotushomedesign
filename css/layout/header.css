@@ -8,19 +8,6 @@ header {
   z-index: 10;
 }
 
-.global-notification {
-  background-color: #f0E7DE;
-  padding: 14px 0;
-  text-align: center;
-  font-size: 13px;
-  color: sienna;
-}
-
-.global-notification a {
-  color: brown;
-  font-weight: 600;
-}
-
 .header-row {
   height: 90px;
   display: flex;
@@ -34,7 +21,7 @@ header {
 }
 
 .header-mobile {
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
   display: none;
 }
