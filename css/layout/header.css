@@ -22,7 +22,6 @@ header {
 
 .header-mobile {
   font-size: 50px;
-  font-weight: 500;
   cursor: pointer;
   display: none;
 }
@@ -46,11 +45,11 @@ header {
 
 .header-right .menu-list .menu-list-item a {
   color: #FFFFFF;
+  font-size: 50px;
 }
 
 .header-right .menu-list .menu-link {
   font-size: 14px;
-  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   position: relative;
@@ -143,7 +142,6 @@ header .menu-dropdown-content a:hover {
 
 .megamenu-wrapper .megamenu-products-title {
   font-size: 16px;
-  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -159,7 +157,6 @@ header .menu-dropdown-content a:hover {
 
 .megamenu-wrapper .megamenu-single-title {
   font-size: 18px;
-  font-weight: 500;
 }
 
 .megamenu-wrapper .megamenu-single-subtitle {
