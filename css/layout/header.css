@@ -1,6 +1,6 @@
 /*! header start  */
 header {
-  border-bottom: 1px solid #dee0ea;
+  border-bottom: 1px solid #8FABD4;
   position: sticky;
   width: 100%;
   top: 0;
@@ -9,7 +9,7 @@ header {
 }
 
 .header-row {
-  height: 90px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -21,7 +21,7 @@ header {
 }
 
 .header-mobile {
-  font-size: 40px;
+  font-size: 50px;
   cursor: pointer;
   display: none;
 }

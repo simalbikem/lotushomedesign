@@ -74,40 +74,18 @@ button:disabled {
 }
 
 .btn-primary {
-  background-color: brown;
-  color: blanchedalmond;
-  border-color: brown;
+  background-color: #4A70A9;
+  color: #EFECE3;
+  border-color: #4A70A9;
 }
 
 .btn-primary:hover {
   background-color: #fff;
-  color: brown;
+  color: #4A70A9;
 }
 
 textarea {
   overflow: auto;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-textarea {
-  outline: none;
-  border: 1px solid #dee0ea;
-  padding: 8px 8px 8px 15px;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-  border-color: gray;
-}
-
-input[type="number"]::-webkit-inner-spin-button {
-  opacity: 1;
 }
 
 .img-fluid {
@@ -119,17 +97,6 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 576px;
 }
 /** base end */
-
-/*** snow ***/
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1000;
-}
 
 /*!  base responsive start */
 @media (max-width: 1200px) {
