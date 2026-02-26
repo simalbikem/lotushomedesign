@@ -9,7 +9,7 @@ header {
 }
 
 .header-row {
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -21,7 +21,7 @@ header {
 }
 
 .header-mobile {
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
   display: none;
 }
@@ -55,7 +55,7 @@ header {
   content: "";
   width: 0;
   height: 1px;
-  background-color: brown;
+  background-color: #4A70A9;
   position: absolute;
   bottom: -2px;
   left: 50%;
@@ -104,7 +104,7 @@ header .menu-dropdown-content a {
 }
 
 header .menu-dropdown-content a:hover {
-  color: brown;
+  color: #4A70A9;
 }
 
 .header-right .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
@@ -189,7 +189,7 @@ header .menu-dropdown-content a:hover {
     position: absolute;
     top: 15px;
     right: 15px;
-    color: brown;
+    color: #4A70A9;
     font-size: 20px;
     cursor: pointer;
   }
