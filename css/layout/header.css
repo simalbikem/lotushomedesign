@@ -1,10 +1,9 @@
-/*! header start  */
 header {
-  border-bottom: 1px solid #8FABD4;
   position: sticky;
-  width: 100%;
   top: 0;
+  width: 100%;
   background: #000;
+  border-bottom: 1px solid #8FABD4;
   z-index: 10;
 }
 
@@ -30,32 +29,28 @@ header {
   display: none;
 }
 
-.header-right .navigation .menu-list {
+.navigation .menu-list {
   display: flex;
-  column-gap: 30px;
   align-items: center;
+  column-gap: 30px;
 }
 
-.header-right .menu-list .menu-list-item {
+.menu-list-item {
   display: flex;
   align-items: center;
   position: relative;
   height: 90px;
 }
 
-.header-right .menu-list .menu-list-item a {
-  color: #FFFFFF;
-  font-size: 50px;
-}
-
-.header-right .menu-list .menu-link {
+.menu-link {
+  color: #fff;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   position: relative;
 }
 
-.header-right .menu-list .menu-link::after {
+.menu-link::after {
   content: "";
   width: 0;
   height: 1px;
@@ -63,127 +58,56 @@ header {
   position: absolute;
   bottom: -2px;
   left: 50%;
-  transform: translate(-50%);
-  transition: 0.2s ease width;
+  transform: translateX(-50%);
+  transition: width 0.2s ease;
 }
 
-.header-right .menu-list .menu-list-item:hover .menu-link::after {
+.menu-list-item:hover .menu-link::after,
+.menu-link.active::after {
   width: 100%;
 }
 
-.header-right .menu-list .menu-link.active::after {
-  width: 100%;
-}
-
-.header-right .menu-list i {
+.menu-list-item i {
   font-size: 12px;
+  margin-left: 5px;
 }
 
-/*? menu dropdown start*/
-
-header .menu-dropdown-wrapper {
+.menu-dropdown-wrapper {
   position: absolute;
   top: 100%;
-  left: -30px;
+  left: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
   z-index: 1;
 }
 
-header .menu-dropdown-content {
-  width: 220px;
-  background-color: #fff;
-  border: 1px solid #dee0ea;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 0;
-}
-
-header .menu-dropdown-content a {
-  display: flex;
-  padding: 4px 30px;
-  font-size: 14px;
-  transition: color 0.2s ease;
-}
-
-header .menu-dropdown-content a:hover {
-  color: #4A70A9;
-}
-
-.header-right .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
-  opacity: 1;
-  visibility: visible;
-}
-
 .menu-dropdown-megamenu {
-  background-color: white;
+  background: #fff;
   border: 1px solid #dee0ea;
   padding: 22px;
-  display: flex;
-  column-gap: 50px;
 }
 
-.megamenu-wrapper .menu-dropdown-wrapper {
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.megamenu-wrapper {
-  position: static !important;
-}
-
-.megamenu-wrapper .megamenu-links {
-  display: flex;
-  column-gap: 50px;
-}
-
-.megamenu-wrapper .megamenu-products-title {
+.mega-menu-products h3 {
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.megamenu-wrapper .megamenu-menu-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2px;
+.menu-list-item:hover .menu-dropdown-wrapper {
+  opacity: 1;
+  visibility: visible;
 }
 
-.megamenu-wrapper .megamenu-menu-list a {
-  font-size: 14px;
-}
-
-.megamenu-wrapper .megamenu-single-title {
-  font-size: 18px;
-}
-
-.megamenu-wrapper .megamenu-single-subtitle {
-  font-size: 14px;
-  margin-bottom: 10px;
-  font-weight: 400;
-}
-
-.megamenu-wrapper .megamenu-single-button {
-  margin-top: 5px;
-}
-
-/*? menu dropdown end*/
-
-/*! header end  */
-
-/** header responsive start */
 @media (max-width: 990px) {
   .header-right {
     position: fixed;
     top: 0;
     left: -100%;
     height: 100vh;
-    background-color: #fff;
+    background: #fff;
     border-right: 1px solid #dee0ea;
     z-index: 2;
-    transition: .5s ease all;
+    transition: 0.5s ease;
   }
 
   .header-right .bi-x-circle {
@@ -196,7 +120,7 @@ header .menu-dropdown-content a:hover {
     cursor: pointer;
   }
 
-  .header-right .menu-list {
+  .navigation .menu-list {
     flex-direction: column;
     padding: 50px 75px;
   }
@@ -205,19 +129,12 @@ header .menu-dropdown-content a:hover {
     display: inline-block;
   }
 
-  header .menu-dropdown-wrapper {
+  .menu-dropdown-wrapper {
     display: none !important;
   }
 
-  header .menu-list i,
-  .header-right .bi-person-heart,
-  .header-right .bi-instagram {
-    display: none;
-  }
-
-  header .menu-list-item a {
+  .menu-list-item a {
     font-size: 16px !important;
+    color: #000;
   }
 }
-
-/** header responsive end */
