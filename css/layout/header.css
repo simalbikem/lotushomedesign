@@ -74,16 +74,16 @@ header {
 
 .menu-dropdown-wrapper {
   position: absolute;
-  top: 100%;
-  left: -10px;
-  min-width: 150px;
+  top: 90%;
+  left: 0;
+  min-width: 95%;
   background: #fff;
   border-radius: 14px;
   padding: 10px 0px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(-10px, 0);
   transition: 0.25s ease;
   z-index: 20;
 }
