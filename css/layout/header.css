@@ -74,9 +74,9 @@ header {
 
 .menu-dropdown-wrapper {
   position: absolute;
-  top: 80%;
+  top: 100%;
   left: 0;
-  max-width: 100px;
+  max-width: 120px;
   background: #fff;
   border-radius: 14px;
   padding: 12px 0;
@@ -99,18 +99,16 @@ header {
 .menu-dropdown-wrapper .dropdown-item {
   display: block;
   padding: 10px 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #252525;
   transition: 0.2s ease;
 }
 
-/* Hover efekti */
 .menu-dropdown-wrapper .dropdown-item:hover {
   background: #f7f7f7;
   color: #4A70A9;
 }
 
-/* Aktif renk */
 .menu-dropdown-wrapper .dropdown-item.active {
   color: #4A70A9;
   font-weight: 600;
@@ -153,6 +151,6 @@ header {
 
   .menu-list-item a {
     font-size: 16px !important;
-    color: #000;
+    color: #252525;
   }
 }
