@@ -76,10 +76,10 @@ header {
   position: absolute;
   top: 100%;
   left: -10px;
-  max-width: 150px;
+  min-width: 150px;
   background: #fff;
   border-radius: 14px;
-  padding: 10px 10px;
+  padding: 10px 0px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
@@ -99,7 +99,7 @@ header {
 .menu-dropdown-wrapper .dropdown-item {
   display: block;
   padding: 10px 10px;
-  font-size: 20px;
+  font-size: 15px;
   color: #252525;
   transition: 0.2s ease;
 }
