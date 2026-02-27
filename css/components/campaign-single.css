@@ -1,5 +1,5 @@
 .campaign-single {
-  background-image: url(../../img/single-campaign.jpg);
+  /*background-image: url(../../img/single-campaign.jpg);*/
   background-attachment: fixed;
   padding: 140px 15px;
   display: flex;
