@@ -23,21 +23,3 @@
   font-weight: 600;
   margin: 20px 0;
 }
-
-.campaign-single .campaign-wrapper span {
-  display: inline-block;
-  width: 50px;
-  height: 5px;
-  background-color: white;
-}
-
-.campaign-single .campaign-wrapper > a {
-  background-color: #fff;
-  margin-top: 60px;
-}
-
-.campaign-single .campaign-wrapper > a:hover {
-  background-color: saddlebrown;
-  border-color: saddlebrown;
-  color: #fff;
-}
