@@ -2,6 +2,7 @@
 .widgets-row {
   padding: 50px 0;
   border-bottom: 1px solid #dee0ea;
+  border-top: 1px solid #dee0ea;
 }
 
 .widgets-row .footer-widgets {
@@ -32,7 +33,7 @@
 
 /** copyright start  */
 .footer-copyright {
-  margin: 40px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
 }
