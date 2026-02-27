@@ -76,32 +76,44 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  opacity: 0;
-  width: 180px;
+  min-width: 180px;
   background: #fff;
-  border-radius: 12px;
-  padding: 14px 0;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  padding: 12px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: 0.2s ease;
-  z-index: 1;
+  transition: 0.25s ease;
+  z-index: 20;
 }
 
-.menu-dropdown-megamenu {
-  background: #fff;
-  border: 1px solid #dee0ea;
-  padding: 22px;
-}
-
-.mega-menu-products a {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
+/* Açılma */
 .menu-list-item:hover .menu-dropdown-wrapper {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
+}
+
+/* Linkler */
+.menu-dropdown-wrapper .dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+/* Hover efekti */
+.menu-dropdown-wrapper .dropdown-item:hover {
+  background: #f7f7f7;
+  color: #4A70A9;
+}
+
+/* Aktif renk */
+.menu-dropdown-wrapper .dropdown-item.active {
+  color: #4A70A9;
+  font-weight: 600;
 }
 
 @media (max-width: 990px) {
