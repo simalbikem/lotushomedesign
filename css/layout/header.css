@@ -74,9 +74,9 @@ header {
 
 .menu-dropdown-wrapper {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 0;
-  min-width: 95%;
+  min-width: 100%;
   background: #fff;
   border-radius: 14px;
   padding: 10px 0px;
@@ -98,7 +98,7 @@ header {
 /* Linkler */
 .menu-dropdown-wrapper .dropdown-item {
   display: block;
-  padding: 10px 10px;
+  padding: 10px 15px;
   font-size: 15px;
   color: #252525;
   transition: 0.2s ease;
