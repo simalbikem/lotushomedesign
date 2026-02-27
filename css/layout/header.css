@@ -75,7 +75,7 @@ header {
 .menu-dropdown-wrapper {
   position: absolute;
   top: 100%;
-  left: 10px;
+  left: -10px;
   max-width: 150px;
   background: #fff;
   border-radius: 14px;
