@@ -78,7 +78,7 @@ header {
   left: 0;
   min-width: 135px;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 10px 0px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   opacity: 0;
@@ -88,14 +88,12 @@ header {
   z-index: 20;
 }
 
-/* Açılma */
 .menu-list-item:hover .menu-dropdown-wrapper {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* Linkler */
 .menu-dropdown-wrapper .dropdown-item {
   display: block;
   padding: 10px 15px;
