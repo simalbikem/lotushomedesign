@@ -1,18 +1,18 @@
 .single-topbar .breadcrumb ul {
-  display: flex;
-}
-  
+    display: flex;
+}  
+
 .single-topbar .breadcrumb ul li {
-  font-size: 12px;
+    font-size: 12px;
 }
-  
+
 .single-topbar .breadcrumb ul li:not(:last-child):after {
-  content: "/";
-  color: #dee0ea;
-  margin: 0 5px;
+    content: "/";
+    color: #dee0ea;
+    margin: 0 5px;
 }
-  
+
 .single-topbar .breadcrumb ul li a:hover {
-  color: #000;
-  text-decoration: underline;
+    color: #000;
+    text-decoration: underline;
 }

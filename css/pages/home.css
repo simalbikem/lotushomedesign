@@ -42,22 +42,6 @@
 }
 /*! campaign end  */
 
-/*! blogs start  */
-.blogs {
-  margin-bottom: 120px;
-}
-
-.blog-page {
-  margin-top: 120px;
-}
-
-.blogs .blog-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 30px;
-}
-/*! blogs end  */
-
 /*! brands start  */
 .brands {
   margin: 40px 0;
