@@ -37,6 +37,7 @@
   font-size: 38px;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #252525;
 }
   
 .single-blog .blog-wrapper .blog-content p {
@@ -58,7 +59,7 @@
   margin-top: 35px;
   margin-bottom: 15px;
   font-weight: 700;
-  color: #1d1d1d;
+  color: #333333;
 }
 
 .blog-content .list-line {
@@ -71,7 +72,7 @@
 }
 
 .blog-content strong {
-  color: #111;
+  color: #333333;
 }
 
 @media (max-width: 600px) {
