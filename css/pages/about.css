@@ -1,0 +1,32 @@
+.about {
+  padding: 100px 0;
+}
+
+.about-title h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+
+.about-title h2::after {
+  content: "";
+  width: 250px;
+  height: 4px;
+  background-color: #8FABD4;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-radius: 2px;
+}
+
+.contact-info-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 850px;
+}
+
+.contact-info-text br {
+  margin-bottom: 10px;
+}
