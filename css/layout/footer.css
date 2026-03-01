@@ -1,4 +1,11 @@
 /** widgets start */
+.social-link{
+  color: #4A70A9;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .widgets-row {
   padding: 40px 0;
   border-bottom: 1px solid #dee0ea;
