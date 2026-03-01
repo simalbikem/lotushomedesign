@@ -8,6 +8,8 @@
 /* components */
 @import url(components/campaign-single.css);
 @import url(components/breadcrumb.css);
+@import url(components/display.css);
+@import url(components/lightbox.css);
 
 /*! pages  */
 @import url(pages/home.css);
