@@ -1,0 +1,169 @@
+.site {
+    --scene: 1;
+    --total: 4;
+    --percentage: calc((var(--scene) - 1) / (var(--total) - 1));
+    position: relative;
+    height: 614px;           
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    isolation: isolate;   
+}
+
+input[name="scene"] {
+    display: none;
+}
+
+#scene-1:checked ~ .site { --scene: 1; }
+#scene-2:checked ~ .site { --scene: 2; }
+#scene-3:checked ~ .site { --scene: 3; }
+#scene-4:checked ~ .site { --scene: 4; }
+
+.landscape {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease;
+    z-index: 1;
+}
+
+.main-text {
+    position: absolute;
+    inset: 0;
+    font-size: clamp(30rem, 38vh, 420px);
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    color: transparent;
+    background: linear-gradient(90deg, #0F2854 0%, #1a3b6e 50%, #0F2854 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 240% auto;
+    background-position: calc(85% + (-95% * var(--percentage))) 50%;
+    transform: translateX(calc(30% + (-105% * var(--percentage))));
+    transition: all 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    z-index: 4;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    text-shadow: 0 0 40px rgba(15, 40, 84, 0.5), 0 0 80px rgba(26, 59, 110, 0.3);
+}
+
+.left-side {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.page-numbers {
+    position: relative;
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 0.75;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.page-numbers::after {
+    content: "/04";
+    font-size: 2.8rem;
+    font-weight: 400;
+    top: 1.5em;
+    left: 6.5rem;
+    opacity: 0.5;
+    letter-spacing: normal;
+}
+
+.page-number--ones {
+    display: inline-block;
+    height: 0.75em;
+    overflow: hidden;
+    vertical-align: top;
+    margin-left: -0.15em;
+}
+
+.page-number--ones > div {
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#scene-1:checked ~ .site .page-number--ones > div { transform: translateY(   0%); }
+#scene-2:checked ~ .site .page-number--ones > div { transform: translateY(-100%); }
+#scene-3:checked ~ .site .page-number--ones > div { transform: translateY(-200%); }
+#scene-4:checked ~ .site .page-number--ones > div { transform: translateY(-300%); }
+
+.hero {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 55%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.scene-title {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: clamp(3.5rem, 6.5vw, 7rem);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.95);
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 90vw;
+    z-index: 2;
+}
+
+#scene-1:checked ~ .site .scene-title[data-scene="1"],
+#scene-2:checked ~ .site .scene-title[data-scene="2"],
+#scene-3:checked ~ .site .scene-title[data-scene="3"],
+#scene-4:checked ~ .site .scene-title[data-scene="4"] {
+    opacity: 1;
+}
+
+.slide-nav {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 15;
+    pointer-events: auto;
+}
+
+.nav-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    background: rgba(20,20,20,0.75);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.1);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(9px);
+}
+
+.nav-button:hover {
+    background: rgba(15, 40, 84, 0.9);
+    border-color: rgba(28, 77, 141);
+    transform: scale(1.1);
+}

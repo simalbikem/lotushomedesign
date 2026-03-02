@@ -12,6 +12,7 @@
 @import url(components/lightbox.css);
 @import url(components/on-scroll-animation.css);
 @import url(components/preloader.css);
+@import url(components/welcome-slide.css);
 
 /*! pages  */
 @import url(pages/home.css);
