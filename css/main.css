@@ -13,6 +13,7 @@
 @import url(components/on-scroll-animation.css);
 @import url(components/preloader.css);
 @import url(components/welcome-slide.css);
+@import url(components/carousel.css);
 
 /*! pages  */
 @import url(pages/home.css);
