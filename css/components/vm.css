@@ -1,0 +1,58 @@
+.vm-section {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #4A70A9, #8FABD4, transparent);
+    z-index: 5;
+    opacity: 1;
+}
+
+.content-left,
+.content-right {
+    position: absolute;
+    color: #252525;
+    top: 15%;
+    width: 45%;
+    max-height: 500px;
+    padding: 40px 40px;
+    transition: all 1.5s cubic-bezier(0.25, 0.85, 0.25, 1);
+    z-index: 5;
+}
+
+.content-left {
+    right: 50%;
+    text-align: right;
+    padding-right: 80px;
+}
+
+.content-right {
+    left: 50%;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.content-left h2,
+.content-right h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+}
+
+.content-left p,
+.content-right p {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 1;
+}
