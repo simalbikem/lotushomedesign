@@ -56,3 +56,144 @@
     line-height: 1.5;
     opacity: 1;
 }
+
+/*responsive*/
+@media (max-width: 1024px) {
+  .vm-section {
+    height: 480px;
+    margin-bottom: 60px;
+  }
+
+  .content-left,
+  .content-right {
+    width: 48%;
+    padding: 35px 30px;
+  }
+
+  .content-left {
+    padding-right: 60px;
+  }
+
+  .content-right {
+    padding-left: 60px;
+  }
+
+  .content-left h2,
+  .content-right h2 {
+    font-size: 42px;
+  }
+
+  .content-left p,
+  .content-right p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vm-section {
+    height: auto;
+    min-height: 800px;
+    margin-bottom: 50px;
+    overflow: visible;
+  }
+
+  .center-line {
+    left: 50%;
+    width: 1.5px;
+    top: 8%;
+  }
+
+  .content-left,
+  .content-right {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    width: 90%;
+    max-width: 540px;
+    margin: 0 auto 60px auto;
+    padding: 30px 25px;
+    text-align: center !important;
+    top: auto;
+    max-height: none;
+  }
+
+  .content-left {
+    padding-right: 25px;
+  }
+
+  .content-right {
+    padding-left: 25px;
+  }
+
+  .content-left h2,
+  .content-right h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  .content-left p,
+  .content-right p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 540px) {
+  .vm-section {
+    min-height: 700px;
+    margin-bottom: 40px;
+  }
+
+  .center-line {
+    width: 1px;
+    opacity: 0.7;
+  }
+
+  .content-left,
+  .content-right {
+    width: 94%;
+    padding: 25px 20px;
+    margin-bottom: 50px;
+  }
+
+  .content-left h2,
+  .content-right h2 {
+    font-size: 32px;
+  }
+
+  .content-left p,
+  .content-right p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 380px) {
+  .vm-section {
+    min-height: 620px;
+    margin-bottom: 35px;
+  }
+
+  .content-left,
+  .content-right {
+    padding: 20px 15px;
+    margin-bottom: 45px;
+  }
+
+  .content-left h2,
+  .content-right h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .content-left p,
+  .content-right p {
+    font-size: 15.5px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .vm-section {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

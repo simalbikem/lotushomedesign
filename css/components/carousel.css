@@ -90,20 +90,152 @@
     width: 85%;
 }
 
-@media (max-width: 580px) {
-    .swiper-slide {
+/*responsive*/
+@media (max-width: 1024px) {
+  .carousel {
+    padding: 60px 0;
+  }
+
+  .swiper-slide {
+    width: 280px !important;
+    height: 380px;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.12);
+  }
+
+  .carousel-title {
+    font-size: 42px;
+  }
+
+  .carousel-subtitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 50px 0 40px;
+  }
+
+  .swiper-slide {
+    width: 260px !important;
+    height: 360px;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.10);
+  }
+
+  .carousel-pagination {
+    margin-top: 20px !important;
+  }
+
+  .carousel-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
+
+  .carousel-pagination-bullet-active {
+    width: 26px;
+  }
+
+  .carousel-title {
+    font-size: 36px;
+  }
+
+  .carousel-subtitle {
+    font-size: 20px;
+  }
+
+  .carousel-header {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .carousel {
+    padding: 40px 0 30px;
+  }
+
+  .swiper-slide {
     width: 240px !important;
+    height: 340px;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.08);
+  }
+
+  .carousel-title {
+    font-size: 32px;
+  }
+
+  .carousel-subtitle {
+    font-size: 18px;
+  }
+
+  .carousel-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .carousel-pagination-bullet-active {
+    width: 24px;
+  }
+
+  .social-link.instagram-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .carousel {
+    padding: 35px 0 25px;
+  }
+
+  .swiper-slide {
+    width: 220px !important;
     height: 320px;
-    }
-    .carousel-header {
-        padding: 1rem 0.8rem;
-    }
-    
-    .carousel-title {
-        font-size: 1.45rem;
-    }
-    
-    .carousel-subtitle {
-        font-size: 1.1rem;
-    }
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.06);
+  }
+
+  .carousel-title {
+    font-size: 28px;
+  }
+
+  .carousel-subtitle {
+    font-size: 17px;
+  }
+
+  .carousel-pagination {
+    margin-top: 15px !important;
+  }
+
+  .carousel-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+
+  .carousel-pagination-bullet-active {
+    width: 20px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .carousel {
+    padding-top: calc(70px + env(safe-area-inset-top));
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .swiper-slide-active {
+    transform: scale(1.10) !important; 
+  }
 }

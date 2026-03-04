@@ -9,3 +9,55 @@
   opacity: 1;
   transform: scale(1);
 }
+
+@media (max-width: 1024px) {
+  .block {
+    transform: scale(0.6);          
+    transition-duration: 0.9s;      
+  }
+}
+
+@media (max-width: 768px) {
+  .block {
+    transform: scale(0.65);
+    transition: all 0.85s cubic-bezier(0.25, 0.8, 0.35, 1);
+  }
+
+  .block {
+    will-change: auto;              
+  }
+
+  .block.appear-active {
+    transition-delay: 0.1s;         
+  }
+}
+
+@media (max-width: 540px) {
+  .block {
+    transform: scale(0.7);           
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .block.appear-active {
+    transition-duration: 0.75s;
+  }
+}
+
+@media (max-width: 380px) {
+  .block {
+    transform: scale(0.75);
+    transition-duration: 0.7s;
+  }
+
+  .block.appear-active {
+    transition-duration: 0.65s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block {
+    transition: none !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}

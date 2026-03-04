@@ -50,3 +50,140 @@
     color: #0F2854;
     border-top: 1px solid #eee;
 }
+
+/*responsive*/
+@media (max-width: 1200px) {
+  .services-container {
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+
+  .services-container h1 {
+    font-size: 44px;
+    margin-bottom: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .service-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0 15px;
+  }
+
+  .services-container h1 {
+    font-size: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem;
+  }
+
+  .service-card img {
+    height: 190px;
+  }
+
+  .service-title {
+    font-size: 1.05rem;
+    padding: 1.1rem 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    margin: 30px auto;
+    padding: 0 12px;
+  }
+
+  .services-container h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+
+  .service-title {
+    font-size: 1rem;
+    padding: 1rem 0.8rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-container {
+    margin: 25px auto;
+    padding: 0 10px;
+  }
+
+  .services-container h1 {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .service-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .service-card img {
+    height: 200px;
+  }
+
+  .service-title {
+    font-size: 1.05rem;
+    padding: 1.1rem 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .services-container {
+    margin: 20px auto;
+    padding: 0 8px;
+  }
+
+  .services-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .services-grid {
+    gap: 1.2rem;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+
+  .service-title {
+    font-size: 0.98rem;
+    padding: 0.9rem 0.8rem;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .services-container {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

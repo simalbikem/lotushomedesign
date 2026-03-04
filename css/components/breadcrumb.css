@@ -16,3 +16,78 @@
     color: #000;
     text-decoration: underline;
 }
+
+/*responsive*/
+@media (max-width: 1024px) {
+  .single-topbar .breadcrumb ul li {
+    font-size: 11.5px;
+  }
+
+  .single-topbar .breadcrumb ul li:not(:last-child):after {
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-topbar .breadcrumb ul {
+    flex-wrap: wrap;           
+    row-gap: 4px;
+  }
+
+  .single-topbar .breadcrumb ul li {
+    font-size: 11px;
+  }
+
+  .single-topbar .breadcrumb ul li:not(:last-child):after {
+    margin: 0 6px 0 4px;     
+  }
+
+  .single-topbar .breadcrumb ul li:last-child {
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 540px) {
+  .single-topbar .breadcrumb ul {
+    font-size: 10.5px;         
+  }
+
+  .single-topbar .breadcrumb ul li {
+    font-size: 10.5px;
+  }
+
+  .single-topbar .breadcrumb ul li:not(:last-child):after {
+    margin: 0 5px;
+    font-size: 10px;
+  }
+
+  .single-topbar .breadcrumb ul {
+    justify-content: flex-start;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .single-topbar .breadcrumb ul {
+    font-size: 10px;
+  }
+
+  .single-topbar .breadcrumb ul li {
+    font-size: 10px;
+  }
+
+  .single-topbar .breadcrumb ul li:not(:last-child):after {
+    margin: 0 4px;
+    font-size: 9.5px;
+  }
+
+  .single-topbar .breadcrumb ul {
+    row-gap: 3px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .single-topbar {
+    padding-top: env(safe-area-inset-top);
+  }
+}

@@ -81,3 +81,130 @@
     .close-btn, .prev-btn, .next-btn { color: #4A70A9; }
     .close-btn:hover, .prev-btn:hover, .next-btn:hover { color: #fff; }
 }
+
+/*responsive*/
+@media (max-width: 1024px) {
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 88vh;
+  }
+
+  .close-btn {
+    right: 25px;
+    font-size: 50px;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 50px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox-modal.show {
+    align-items: flex-start;
+    padding-top: 10vh; 
+  }
+
+  .lightbox-content {
+    max-width: 94%;
+    max-height: 80vh;
+    margin: 10vh auto 5vh;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 20px;
+    font-size: 45px;
+  }
+
+  .prev-btn {
+    left: 10px;
+    font-size: 45px;
+    width: 60px;
+  }
+
+  .next-btn {
+    right: 10px;
+    font-size: 45px;
+    width: 60px;
+  }
+
+  .prev-btn, .next-btn {
+    height: 80%; 
+  }
+}
+
+@media (max-width: 540px) {
+  .lightbox-content {
+    max-width: 96%;
+    max-height: 75vh;
+  }
+
+  .close-btn {
+    font-size: 40px;
+    right: 15px;
+    top: 10px;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 40px;
+    width: 55px;
+  }
+
+  .prev-btn {
+    left: 5px;
+  }
+
+  .next-btn {
+    right: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .lightbox-modal.show {
+    padding-top: 8vh;
+  }
+
+  .lightbox-content {
+    max-width: 98%;
+    max-height: 70vh;
+  }
+
+  .close-btn {
+    font-size: 36px;
+    right: 12px;
+  }
+
+  .prev-btn, .next-btn {
+    font-size: 36px;
+    width: 50px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .lightbox-modal {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .lightbox-modal.show {
+    padding-top: calc(10vh + env(safe-area-inset-top));
+  }
+
+  .close-btn {
+    top: calc(10px + env(safe-area-inset-top));
+    right: calc(15px + env(safe-area-inset-right));
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .close-btn, .prev-btn, .next-btn {
+    font-size: 48px;         
+    padding: 20px;            
+  }
+
+  .prev-btn, .next-btn {
+    width: 80px;
+  }
+}

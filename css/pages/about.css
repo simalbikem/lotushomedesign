@@ -30,3 +30,102 @@
 .contact-info-text br {
   margin-bottom: 10px;
 }
+
+/*responsive*/
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .about-title h2::after {
+    width: 220px;
+  }
+
+  .contact-info-text p {
+    font-size: 18px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-title h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .about-title h2::after {
+    width: 180px;
+    height: 3px;
+  }
+
+  .contact-info-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .contact-info-text br {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about {
+    padding: 50px 0;
+  }
+
+  .about-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .about-title h2::after {
+    width: 140px;
+  }
+
+  .contact-info-text p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 380px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-title h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .about-title h2::after {
+    width: 120px;
+    height: 3px;
+  }
+
+  .contact-info-text p {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .contact-info-text br {
+    margin-bottom: 6px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .about {
+    padding-top: calc(100px + env(safe-area-inset-top));
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+}
