@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "img": "img/services/a. Ücretsiz Keşif & 3D Hizmeti.jpg",
+        "title": "Ücretsiz Keşif & 3D Hizmeti"
+    },
+    {
+        "id": 2,
+        "img": "img/services/b. Mutfak Dolabı.jpg",
+        "title": "Mutfak Dolabı"
+    },
+    {
+        "id": 3,
+        "img": "img/services/c. Banyo Dolabı.jpg",
+        "title": "Banyo Dolabı"
+    },
+    {
+        "id": 4,
+        "img": "img/services/d. Gardrope & Giyinme Odası.jpg",
+        "title": "Gardrope & Giyinme Odası"
+    },
+    {
+        "id": 5,
+        "img": "img/services/e. Ahşap Merdiven.jpg",
+        "title": "Ahşap Merdiven"
+    },
+    {
+        "id": 6,
+        "img": "img/services/f. Mutfak Tezgahı.jpg",
+        "title": "Mutfak Tezgahı"
+    },
+    {
+        "id": 7,
+        "img": "img/services/g. TV Ünitesi.jpg",
+        "title": "TV Ünitesi"
+    },
+    {
+        "id": 8,
+        "img": "img/services/h. Cam Balkon & Kış Bahçesi.jpg",
+        "title": "Cam Balkon & Kış Bahçesi"
+    },
+    {
+        "id": 9,
+        "img": "img/services/i. Ev Dekorasyonu.jpg",
+        "title": "Ev Dekorasyonu / Tadilatı"
+    },
+    {
+        "id": 10,
+        "img": "img/services/j. Cafe & İş Yeri Dekorasyonu.jpg",
+        "title": "Cafe & İş Yeri Dekorasyonu / Tadilatı"
+    },
+    {
+        "id": 11,
+        "img": "img/services/k. Mutfak Tadilatı.jpg",
+        "title": "Mutfak Tadilatı"
+    },
+    {
+        "id": 12,
+        "img": "img/services/l. Banyo Tadilatı.jpg",
+        "title": "Banyo Tadilatı"
+    }
+]
