@@ -1,50 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const btnMenu    = document.getElementById("btn-menu");
-    const sidebar    = document.getElementById("sidebar");
-    const closeBtn   = document.getElementById("close-sidebar");
+const btnOpenSidebar = document.querySelector("#btn-menu");
+const sidebar = document.querySelector("#sidebar");
+const btnCloseSidebar = document.querySelector("#close-sidebar");
+const servicesMenu = document.querySelector(".megamenu-wrapper");
 
-    if (!btnMenu || !sidebar || !closeBtn) {
-        console.warn("Sidebar elemanlarından biri eksik.");
-        return;
+btnOpenSidebar.addEventListener("click", () => {
+    sidebar.classList.add("active");
+});
+
+btnCloseSidebar.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+});
+
+document.addEventListener("click", (event) => {
+    if (!sidebar.contains(event.target) && !btnOpenSidebar.contains(event.target)) {
+        sidebar.classList.remove("active");
     }
+});
 
-    btnMenu.addEventListener("click", (e) => {
-        e.stopPropagation();
-        sidebar.classList.add("active");
-        document.body.classList.add("sidebar-open");
-    });
-
-    closeBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        sidebar.classList.remove("active");
-        document.body.classList.remove("sidebar-open");
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!document.body.classList.contains("sidebar-open")) return;
-
-        const clickInside = sidebar.contains(e.target);
-        const clickHamburger = btnMenu === e.target || btnMenu.contains(e.target);
-
-        if (!clickInside && !clickHamburger) {
-        sidebar.classList.remove("active");
-        document.body.classList.remove("sidebar-open");
+document.querySelectorAll(".megamenu-wrapper").forEach(menu => {
+    menu.addEventListener("click", (e) => {
+        if (window.innerWidth <= 991) {
+        e.preventDefault();
+        menu.classList.toggle("active");
         }
-    });
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && document.body.classList.contains("sidebar-open")) {
-        sidebar.classList.remove("active");
-        document.body.classList.remove("sidebar-open");
-        }
-    });
-
-    sidebar.querySelectorAll(".menu-link").forEach(link => {
-        link.addEventListener("click", () => {
-        if (window.innerWidth <= 900) {
-            sidebar.classList.remove("active");
-            document.body.classList.remove("sidebar-open");
-        }
-        });
     });
 });
