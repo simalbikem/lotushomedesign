@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar       = document.getElementById('sidebar');
     const body          = document.body;
 
-    if (!btnOpen || !sidebar) {
-        console.warn("Sidebar veya açma butonu bulunamadı.");
+    if (!btnOpen || !sidebar || !btnClose) {
+        console.warn("Header elementlerinden biri eksik!");
         return;
     }
 
@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeSidebar() {
         sidebar.classList.remove('active');
         body.classList.remove('menu-open');
-
         document.querySelectorAll('.menu-list-item.active').forEach(item => {
-        item.classList.remove('active');
+            item.classList.remove('active');
         });
     }
 
@@ -27,51 +26,55 @@ document.addEventListener('DOMContentLoaded', () => {
     btnClose.addEventListener('click', closeSidebar);
 
     document.addEventListener('click', (e) => {
-        if (
-        sidebar.classList.contains('active') &&
-        !sidebar.contains(e.target) &&
-        !btnOpen.contains(e.target)
-        ) {
-        closeSidebar();
+        if (sidebar.classList.contains('active') &&
+            !sidebar.contains(e.target) &&
+            !btnOpen.contains(e.target)) {
+            closeSidebar();
         }
     });
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && sidebar.classList.contains('active')) {
-        closeSidebar();
+            closeSidebar();
         }
     });
 
-    if (window.innerWidth <= 991) {
-        document.querySelectorAll('.megamenu-wrapper > .menu-link').forEach(mainLink => {
-        mainLink.addEventListener('click', function (e) {
+    const megaLinks = document.querySelectorAll('.megamenu-wrapper > .menu-link');
+
+    megaLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
             if (window.innerWidth > 991) return;
 
-            e.preventDefault();          
-            e.stopPropagation();         
+            e.preventDefault();
+            e.stopPropagation();
 
             const parentItem = this.closest('.menu-list-item');
 
             document.querySelectorAll('.menu-list-item.active').forEach(item => {
-            if (item !== parentItem) item.classList.remove('active');
+                if (item !== parentItem) item.classList.remove('active');
             });
 
             parentItem.classList.toggle('active');
         });
-        });
+    });
 
-        document.querySelectorAll('#sidebar .dropdown-item').forEach(link => {
-        link.addEventListener('click', closeSidebar);
-        });
+    const allMenuLinks = document.querySelectorAll('#sidebar .menu-link:not(.megamenu-wrapper > .menu-link), #sidebar .dropdown-item');
 
-        document.querySelectorAll('#sidebar .menu-link:not(.megamenu-wrapper > .menu-link)').forEach(link => {
-        link.addEventListener('click', closeSidebar);
+    allMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(closeSidebar, 80);
         });
-    }
+    });
+
+    let isMobile = window.innerWidth <= 991;
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 991 && sidebar.classList.contains('active')) {
-        closeSidebar();
+        const nowMobile = window.innerWidth <= 991;
+
+        if (!nowMobile && isMobile && sidebar.classList.contains('active')) {
+            closeSidebar();
         }
+
+        isMobile = nowMobile;
     });
 });

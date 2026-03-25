@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .header-mobile {
@@ -130,6 +130,10 @@ header {
     z-index: 200;
   }
 
+  .header-mobile .bi-list{
+    padding-right: 7.5px;
+  }
+
   .header-left {
     flex: 1;
     text-align: center;
@@ -138,7 +142,7 @@ header {
   .header-right {
     position: fixed;
     inset: 0  auto 0 0;           
-    width: 250px;
+    min-width: 250px;
     height: 200vh;               
     background-color: #0a0a0e;
     border-right: 1px solid #8FABD4;
@@ -232,7 +236,7 @@ header {
   }
 
   .header-right {
-    width: 300px;
+    min-width: 300px;
     max-width: 88vw;
   }
 
