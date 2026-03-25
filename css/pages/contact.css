@@ -1,5 +1,5 @@
 .contact .contact-bottom {
-  margin: 30px 0;
+  margin: 100px 0;
 }
 
 .contact-bottom .contact-titles {
@@ -88,7 +88,7 @@
   .contact .contact-map iframe {
   display: none;
   }
-  
+
   .contact-bottom .contact-titles {
     width: 85%;
   }
@@ -113,7 +113,7 @@
   }
 
   .contact .contact-bottom {
-    margin: 25px 0;
+    margin: 75px 0;
   }
 
   .contact-bottom .contact-titles {
